@@ -1,0 +1,9 @@
+[user]
+	name = Blah
+	email = blah@blah.com	helper = wincred
+[core]
+	autocrlf = true
+
+[filter "add-commit-msg"]
+clean = cscript.exe //NoLogo c:/commit-msg-clean.vbs
+smudge = cscript.exe //NoLogo c:/commit-msg-smudge.vbs %f

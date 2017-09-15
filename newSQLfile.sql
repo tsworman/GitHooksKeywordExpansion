@@ -1,0 +1,3 @@
+--$Log:
+
+select * from dual;
