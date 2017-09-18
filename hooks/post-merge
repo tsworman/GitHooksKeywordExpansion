@@ -5,7 +5,7 @@ for sql in `git diff-tree -r --name-only --no-commit-id master`; do
   ext=${sql: -4}
   if [ "$ext" = ".sql" ] 
   then
-	 `(cat $sql | cscript.exe //NoLogo cL/commit-msg-clean.vbs | cscript.exe //NoLogo c:/-commit-msg-smudge.vbs "$sql" ) > $sql.new.hook`
+	 `(cat $sql | cscript.exe //NoLogo c:/commit-msg-clean.vbs | cscript.exe //NoLogo c:/commit-msg-smudge.vbs "$sql" ) > $sql.new.hook`
      `cat $sql.new.hook > $sql`
 	 `rm $sql.new.hook`
   fi
